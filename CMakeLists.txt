@@ -499,7 +499,7 @@ if(CUDA_FOUND)
         )
     endif()
     target_link_libraries(xmrstak_cuda_backend ${CUDA_LIBRARIES})
-    target_link_libraries(xmrstak_cuda_backend xmr-stak-backend)
+    target_link_libraries(xmrstak_cuda_backend fast-stak-backend)
 endif()
 
 # compile AMD backend
@@ -512,7 +512,7 @@ if(OpenCL_FOUND)
         ${OPENCLSRCFILES}
     )
     target_link_libraries(xmrstak_opencl_backend ${OpenCL_LIBRARY} )
-    target_link_libraries(xmrstak_opencl_backend xmr-stak-backend)
+    target_link_libraries(xmrstak_opencl_backend fast-stak-backend)
 endif()
 
 # compile final binary
